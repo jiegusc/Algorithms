@@ -36,10 +36,6 @@
 # print(table)
 def knapsack_dynamic(weights, values, weight_bag):
     #   keep the order, the first is useless, just keep the form.
-    weights = [0, 1, 4, 3, 1]
-    values = [0, 1500, 3000, 2000, 2000]
-    weight_bag = 4
-
     result_weight = []
     #   the number of the items
     num = len(weights) - 1
@@ -60,12 +56,25 @@ def knapsack_dynamic(weights, values, weight_bag):
 
     return result_weight, table[num][weight_bag]
 
+def kkk(weights,values, weight_bag):
+    num = len(weights)
+    dp = [[0 for _ in range(len(values))] for _ in range(weight_bag + 1)]
+    for i in range(1, num):
+        for j in range(1, weight_bag + 1):
+            if (j >= weights[i]):
+                dp[i][j] = max(dp[i - 1][j], dp[i - 1][j - weights[i]] + values[i])
+            else:
+                dp[i][j] = dp[i-1][j]
+    return dp
 
 weights = [0, 1, 4, 3, 1]
 values = [0, 1500, 3000, 2000, 2000]
 weight_bag = 4
 a, b = knapsack_dynamic(weights, values, weight_bag)
-# print(a, b)
+print(a, b)
+print("%%%%%%%%")
+print(kkk(weights,values, weight_bag))
+
 
 # def mapeach(w,v):
 #     table = [[1,1] for _ in range(len(w))]
@@ -138,6 +147,33 @@ s1 = [1,3,4,5,6,7,7,8]
 s2 = [3,5,7,4,8,6,7,8,2]
 # s1 = [6,5,4,3,2,1]
 # s2 = [1,2,3,4,5,6]
-print(LCS(s1, s2))
+# print(LCS(s1, s2))
 
 
+print("#################################")
+# things = ["a","b","c","d","e"]
+# value = [6,3,5,4,6]
+# weight = [2,2,6,5,4]
+
+# def backpack(n, w):
+#     if( n == 0  or weight ==0):
+#         return 0
+#     # 已经超出当前的承受重量
+#     if( w < weight[5 - n]):
+#         ret = backpack(n - 1, w)
+#         print("direct n = : ", n, "w = : ", w, "val = : ", ret )
+#         return ret
+#     val1 = backpack(n - 1,w - weight[5 - n]) + value[5-n]
+#     val2 = backpack(n-1,w)
+#     if(val1 > val2):
+#         ret = val1
+#     elif (val1 < val2):
+#         ret = val2
+#     else:
+#         ret = val1
+#     print("n = :", n, " w = : " , w, "val = : ", ret)
+#     return  ret
+#
+# print(backpack(5,10))
+#
+#
