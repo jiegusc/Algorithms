@@ -1,7 +1,6 @@
 # Algorithms
 Algorithms
 
-
 1. Brute Force
 2. Recursive
 3. Dynamic Programming
@@ -22,3 +21,7 @@ Machine Learning:
 8. Gradient Boosting & Adaboost
 9. Principal Component Analysis
 10. Deep learning
+
+
+三角函数：
+https://zhuanlan.zhihu.com/p/3909280565d32b8543ea041c4e7208d2fe5eeb6235f3a96ee
