@@ -23,5 +23,3 @@ Machine Learning:
 10. Deep learning
 
 
-三角函数：
-https://zhuanlan.zhihu.com/p/3909280565d32b8543ea041c4e7208d2fe5eeb6235f3a96ee
