@@ -23,3 +23,5 @@ Machine Learning:
 10. Deep learning
 
 
+Bayes Network: DAG (Directed Acyclic Graph)
+Markov Model: UG (Undirected Graph)
